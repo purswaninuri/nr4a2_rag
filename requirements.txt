@@ -8,4 +8,4 @@ opentelemetry-sdk
 opentelemetry-exporter-otlp
 protobuf==3.20.*
 chromadb[postgresql]
-psycopg2
+psycopg2-binary
