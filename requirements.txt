@@ -3,3 +3,7 @@ openai
 sentence-transformers
 chromadb
 PyPDF2
+opentelemetry-api
+opentelemetry-sdk
+opentelemetry-exporter-otlp
+protobuf==3.20.*
