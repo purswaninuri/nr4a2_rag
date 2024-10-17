@@ -5,8 +5,6 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 # Test the SQLite version
 import sqlite3
-st.write(f"SQLite version: {sqlite3.sqlite_version}")
-
 import streamlit as st
 import openai
 from sentence_transformers import SentenceTransformer
@@ -15,6 +13,8 @@ from chromadb.config import Settings
 import openai
 from openai import OpenAI
 import os
+
+st.write(f"SQLite version: {sqlite3.sqlite_version}")
 
 # Initialize OpenAI API key
 
