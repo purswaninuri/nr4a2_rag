@@ -1,9 +1,13 @@
 FROM python:3.9-slim
 
-# Install the required SQLite version
-RUN apt-get update && apt-get install -y sqlite3
+# Install system dependencies, including SQLite and PostgreSQL libraries
+RUN apt-get update && apt-get install -y \
+    sqlite3 \
+    libsqlite3-dev \
+    postgresql-client \
+    gcc
 
-# Install dependencies
+# Install Python packages
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
