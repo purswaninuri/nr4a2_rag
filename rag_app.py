@@ -52,7 +52,7 @@ def summarize_chunks(chunks):
     ]
 
    # Query OpenAI's ChatCompletion API
-    response = client2.chat.completions.create(model='gpt-4', messages=messages)
+    response = client2.chat.completions.create(model="gpt-3.5-turbo", messages=messages)
 
     answer = response.choices[0].message.content
     return answer
