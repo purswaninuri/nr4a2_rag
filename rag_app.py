@@ -12,7 +12,7 @@ import os
 client2 = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 # Specify the persistent storage path for ChromaDB
-PERSISTENT_DB_PATH = "/Users/nuri/Documents/nr4a2_literature/rag_app/chroma/"
+PERSISTENT_DB_PATH = "./chroma/"
 
 embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
 client = chromadb.PersistentClient(path=PERSISTENT_DB_PATH)
