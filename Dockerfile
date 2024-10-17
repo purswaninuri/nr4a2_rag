@@ -1,13 +1,13 @@
 FROM python:3.9-slim
 
-# Install SQLite version >= 3.35.0
+# Install the required SQLite version
 RUN apt-get update && apt-get install -y sqlite3
 
-# Install your Python dependencies
+# Install dependencies
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copy the app files
+# Set up the application
 COPY . /app
 WORKDIR /app
 
