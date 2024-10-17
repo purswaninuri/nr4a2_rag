@@ -7,6 +7,10 @@ import openai
 from openai import OpenAI
 import os
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 # Initialize OpenAI API key
 
 client2 = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
