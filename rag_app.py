@@ -7,9 +7,15 @@ import openai
 from openai import OpenAI
 import os
 
+
+# Use pysqlite3 as a replacement for sqlite3
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
+# Test the SQLite version
+import sqlite3
+st.write(f"SQLite version: {sqlite3.sqlite_version}")
 
 # Initialize OpenAI API key
 
